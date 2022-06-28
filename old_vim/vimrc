@@ -1,0 +1,79 @@
+
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Download plug-ins to the ~/.vim/plugged/ directory
+call vundle#begin('~/.vim/plugged')
+
+" Tree stuff
+Plugin 'mbbill/undotree'
+Plugin 'preservim/nerdtree'
+
+
+" Appearence
+Plugin 'sheerun/vim-polyglot'
+Plugin 'scheakur/vim-scheakur'
+
+" Functional
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'vim-utils/vim-man'
+
+" Let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+call vundle#end()
+
+
+
+filetype plugin indent on
+
+" whitespace
+set tabstop=4
+set shiftwidth=4
+set smartindent
+
+
+" case
+set ignorecase 
+set smartcase
+
+" undo
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+
+" regex
+set incsearch
+set nohlsearch
+
+" os
+set mouse=a
+set clipboard=unnamedplus
+set noerrorbells
+"set spell spelllang=en_us
+
+"appereance
+syntax on
+colors scheakur
+set scrolloff=8
+set nowrap
+set ruler
+set background=dark
+"set cursorline
+set nu
+
+" press Ctrl-p to toggle autopairs
+let g:AutoPairsShortcutToggle = '<C-P>'
+
+let g:python3_host_prog = expand("/opt/homebrew/bin/python3")
+
+let mapleader = " "
+
+"remaps
+
+inoremap jk <ESC>
+inoremap kj <ESC>
+
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>n :NERDTree<CR>
+
